@@ -9,7 +9,7 @@ script:
   - docker run medladhibi/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t medladhibi/multi-client ./client
+  - docker build -t medladhibi/multi-client ./client      
   - docker build -t medladhibi/multi-nginx ./nginx
   - docker build -t medladhibi/multi-server ./server
   - docker build -t medladhibi/multi-worker ./worker
